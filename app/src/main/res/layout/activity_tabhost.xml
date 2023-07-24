@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tabhost">
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/relativeLayout2">
+
+                        <ImageView
+                            android:id="@+id/imgView"
+
+                            android:layout_width="201dp"
+                            android:layout_height="51dp"
+                            android:layout_marginLeft="200dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginRight="255dp"
+                            app:layout_constraintHorizontal_bias="0.383"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/uploadImg" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/pricex"
+
+                            android:layout_width="210dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="84dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="85dp"
+                            android:ems="10"
+                            android:hint="Price"
+                            android:inputType="number"
+                            android:textSize="14sp"
+                            app:layout_constraintHorizontal_bias="0.31"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/phonex"
+                            tools:ignore="MissingConstraints" />
+
+                        <Button
+                            android:id="@+id/buttonx"
+
+                            android:layout_width="213dp"
+                            android:layout_height="37dp"
+                            android:layout_marginLeft="84dp"
+                            android:layout_marginRight="85dp"
+                            android:layout_marginBottom="17dp"
+                            android:onClick="buttonok"
+
+                            android:text="Publish now"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintHorizontal_bias="0.517"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <Button
+                            android:id="@+id/uploadImg"
+
+                            android:layout_width="104dp"
+                            android:layout_height="45dp"
+
+
+                            android:layout_marginTop="484dp"
+                            android:layout_marginEnd="116dp"
+                            android:layout_marginRight="116dp"
+                            android:text="Upload"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/chooseImg"
+
+                            android:layout_width="54dp"
+                            android:layout_height="43dp"
+
+                            android:layout_marginTop="484dp"
+                            android:layout_marginEnd="28dp"
+                            android:layout_marginRight="28dp"
+                            android:text="+"
+                            app:layout_constraintEnd_toStartOf="@+id/uploadImg"
+                            app:layout_constraintRight_toLeftOf="@+id/uploadImg"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Spinner
+                            android:id="@+id/spinner"
+
+
+                            android:layout_width="216dp"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginTop="212dp"
+                            android:layout_marginRight="80dp"
+                            app:layout_constraintHorizontal_bias="0.371"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/phonex"
+
+                            android:layout_width="210dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="84dp"
+                            android:layout_marginTop="108dp"
+                            android:layout_marginRight="85dp"
+
+                            android:ems="10"
+                            android:hint="Phone"
+                            android:inputType="phone"
+                            android:textSize="14sp"
+                            app:layout_constraintHorizontal_bias="0.31"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/namex"
+
+                            android:layout_width="207dp"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="83dp"
+                            android:layout_marginTop="60dp"
+                            android:layout_marginRight="86dp"
+                            android:ems="10"
+                            android:hint="Title"
+                            android:inputType="textPersonName"
+                            android:textSize="14sp"
+                            app:layout_constraintHorizontal_bias="0.27"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <Spinner
+                            android:id="@+id/spinner2"
+                            android:layout_width="212dp"
+                            android:layout_height="37dp"
+                            android:layout_marginStart="107dp"
+                            android:layout_marginLeft="107dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginEnd="105dp"
+                            android:layout_marginRight="105dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+
+                        <Spinner
+                            android:id="@+id/spinner3"
+                            android:layout_width="212dp"
+                            android:layout_height="33dp"
+                            android:layout_marginStart="107dp"
+                            android:layout_marginLeft="107dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginEnd="105dp"
+                            android:layout_marginRight="105dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/descriptionx" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/descriptionx"
+                            android:layout_width="217dp"
+                            android:layout_height="61dp"
+                            android:layout_marginStart="105dp"
+                            android:layout_marginLeft="105dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="102dp"
+                            android:layout_marginRight="102dp"
+                            android:hint="Description"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.615"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/modelx" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/modelx"
+                            android:layout_width="211dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="99dp"
+                            android:layout_marginLeft="99dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="103dp"
+                            android:layout_marginRight="103dp"
+                            android:hint="Model"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </FrameLayout>
+        </RelativeLayout>
+    </TabHost>
+
+</RelativeLayout>
